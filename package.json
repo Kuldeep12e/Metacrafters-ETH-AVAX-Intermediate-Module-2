@@ -1,0 +1,18 @@
+{
+  "name": "web3-bank",
+  "version": "1.0.0",
+  "description": "An intuitive web3 application created using HTML, CSS, and Solidity.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "keywords": [],
+  "author": "Rizul Bhardwah",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.16.1",
+    "lite-server": "^2.6.1"
+  }
+}

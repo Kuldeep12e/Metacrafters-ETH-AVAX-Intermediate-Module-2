@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #141e30;
+}
+
+.u-font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.u-width {
+  width: calc(50% - 10px) !important;
+}
+
+@media (min-width: 601px) {
+  .u-width {
+    width: 100%;
+  }
+}
+
+.hide {
+  display: none !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  transition: all 2s ease-in-out !important;
+}
+
+
+.disable:hover {
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+}
+
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <link rel="icon" href="./public/images/favicon.jpg" type="image/x-icon"/>
+    <title>Metacrafters Local Bank</title>
+</head>
+<body>
+    <div class="body">
+        <div class="gradient">
+        </div>
+    </div>
+    <h1 class="u-font text-uppercase text-success display-6 text-center my-4 fw-medium">Metacrafters Local Bank</h1>
+
+    <div class="d-flex flex-column container border-5 bg-light u-width py-5 border border-success rounded">
+        <button id="connect-btn" class="u-font mx-auto text-center btn btn-dark rounded p-3 mb-5">Connect your wallet</button>
+        <div  id="content" class="border-top border-5 d-flex flex-column px-3 justify-content-center align-items-center">
+            <!--  -->
+            
+            <div class="container-fluid d-flex d-flex flex-row align-items-center justify-content-around">
+                <div class="fs-5 fw-light mt-2  me-auto mb-2">
+                    <span>Account Name</span> 
+                </div>
+                <span id="account-name" class="fs-5 fw-light badge text-bg-info">NAME NAME</span>
+            </div>
+
+            <div class="container-fluid d-flex d-flex flex-row mt-1 align-items-center justify-content-around">
+                <div class="fs-5 fw-light mt-2  me-auto mb-2">
+                    Account Address 
+                </div>
+                <span id="account" class="fs-5 fw-light badge text-bg-success" >0x00000000000000000000</span>
+            </div>
+            
+            <div class="container-fluid d-flex mt-1 d-flex flex-row align-items-center justify-content-around">
+                <div class="fs-5 fw-light mt-2  me-auto mb-2">
+                    Balance 
+                </div>
+                <span class="fs-5 fw-light badge text-bg-primary" id="balance"></span> <span class="fs-5 fw-light badge text-bg-danger"> ETH</span> 
+            </div>
+
+            <div class="container-fluid d-flex container-fluid mt-3 border-top  border-5 d-flex flex-row align-items-center justify-content-around">
+                <div class="fs-5 fw-light mt-2  me-4 mb-2">
+                    <button data-bs-toggle="modal" data-bs-target="#transferModal" class="btn btn-outline-warning mt-4">Transfer funds</button>
+                </div>
+                <div data-bs-toggle="modal" data-bs-target="#accountNameModal" class="fs-5 fw-light mt-2  me-4 mb-2">
+                    <button class="btn btn-outline-primary mt-4">Change Account Name</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="transferModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Transfer Funds</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div>
+                Recipient Address
+            </div>
+            <input id="reciever" type="text">
+            <div>
+                Amount
+            </div>
+            <input id="amount" type="text">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="closeTransfer" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="confirm-transfer-btn" type="button" class="btn btn-danger">Confirm Transfer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal -->
+  <div class="modal fade" id="accountNameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Change Name</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div>
+                Account Name
+            </div>
+            <input id="input-name" type="text">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="closeName" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="confirm-name-btn" type="button" class="btn btn-danger">Confirm Name</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+  <script type="module" src="./public/js/script.js"></script>
+</body>
+</html>
